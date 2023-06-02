@@ -10,7 +10,7 @@ import { Link } from "@remix-run/react";
 
 import Button from "@mui/material/Button";
 
-import { useOptionalUser } from "~/utils";
+import { useOptionalUser } from "~/common/utils";
 
 ////////////////////////////////////////////////////////////////////////////////
 
