@@ -19,12 +19,11 @@
     },
     "packageManager": "pnpm@8.6.0",
     "scripts": {
+        "build": "pnpm --filter app run build",
+        "dev": "pnpm --filter app run dev",
+        "start": "pnpm --filter app run start",
+
         "postinstall": "prisma generate",
-        "build": "remix build",
-        "dev": "cross-env NODE_ENV=development remix dev",
-        "setup": "prisma generate && prisma migrate deploy && prisma db seed",
-        "start": "remix-serve build",
-        "bash": "bash",
         "sleep": "sleep infinity",
 
         "db:generate": "prisma generate",
@@ -33,52 +32,21 @@
         "db:reset": "prisma migrate reset",
         "db:format": "prisma format",
 
-        "up": "bash -c 'NPM_SCRIPT=sleep docker compose up -d; docker compose logs -f'",
+        "up": "bash -c 'NPM_SCRIPT=dev docker compose up -d; docker compose logs -f'",
         "down": "docker compose stop; docker compose rm -f -v",
         "restart": "pnpm run down; pnpm run up",
 
         "server:bash": "docker compose exec server bash"
     },
     "prisma": {
-        "schema": "src/db/schema.prisma",
-        "seed": "ts-node --require tsconfig-paths/register src/db/seed.ts"
+        "schema": "apps/db/schema.prisma",
+        "seed": "ts-node --require tsconfig-paths/register apps/db/seed.ts"
       },
     "dependencies": {
-        "@prisma/client": "^4.15.0",
-        "@remix-run/css-bundle": "^1.16.1",
-        "@remix-run/node": "^1.16.1",
-        "@remix-run/react": "^1.16.1",
-        "@remix-run/serve": "^1.16.1",
-        "bcryptjs": "^2.4.3",
-        "isbot": "^3.6.10",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "tiny-invariant": "^1.3.1"
     },
     "devDependencies": {
-        "@remix-run/dev": "^1.16.1",
-        "@remix-run/eslint-config": "^1.16.1",
-        "@types/bcryptjs": "^2.4.2",
-        "@types/eslint": "^8.40.0",
-        "@types/node": "^20.2.5",
-        "@types/react": "^18.2.8",
-        "@types/react-dom": "^18.2.4",
-        "@vitejs/plugin-react": "^4.0.0",
-        "autoprefixer": "^10.4.14",
-        "binode": "^1.0.5",
-        "cookie": "^0.5.0",
-        "cross-env": "^7.0.3",
-        "eslint": "^8.41.0",
-        "eslint-config-prettier": "^8.8.0",
-        "postcss": "^8.4.24",
-        "prettier": "^2.8.8",
-        "prettier-plugin-tailwindcss": "^0.3.0",
         "prisma": "^4.15.0",
-        "tailwindcss": "^3.3.2",
         "ts-node": "^10.9.1",
-        "tsconfig-paths": "^4.2.0",
-        "typescript": "^5.1.3",
-        "vite": "^4.3.9",
-        "vite-tsconfig-paths": "^4.2.0"
+        "typescript": "^5.1.3"
     }
 }
