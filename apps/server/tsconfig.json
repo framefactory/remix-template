@@ -1,27 +1,29 @@
 {
     "compilerOptions": {
-      "lib": ["DOM", "DOM.Iterable", "ES2019"],
-      "isolatedModules": true,
-      "esModuleInterop": true,
-      "jsx": "react-jsx",
-      "module": "CommonJS",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "target": "ES2019",
-      //"strict": true,
-      "allowJs": true,
-      "forceConsistentCasingInFileNames": true,
+        "lib": ["DOM", "DOM.Iterable", "ES2019"],
+        "target": "ES2019",
 
-      "baseUrl": ".",
-      "paths": {
-        "~/*": ["./src/*"]
-      },
-      "skipLibCheck": true,
-  
-      // Remix takes care of building everything in `remix build`.
-      "noEmit": true
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+
+        //"strict": true,
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./app/*"]
+        },
+
+        // Remix takes care of the build
+        "noEmit": true
     },
 
     "exclude": ["./cypress", "./cypress.config.ts"],
-    "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
 }
