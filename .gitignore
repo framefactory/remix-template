@@ -1,0 +1,26 @@
+# FOLDERS
+.idea/
+.vscode/
+.cache/
+.pnpm-store/
+node_modules/
+
+data/
+logs/
+doc/
+build/
+assets/
+src/db/migrations/
+services/server/bin/
+services/server/protected/
+services/server/public/
+services/server/build/
+services/server/static/
+services/db/data/
+services/redis/data/
+
+# FILES
+.env
+*.log
+.DS_Store
+pnpm-lock.yaml
