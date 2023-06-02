@@ -14,7 +14,7 @@
 
       "baseUrl": ".",
       "paths": {
-        "~/*": ["./*"]
+        "~/*": ["./src/app/*"]
       },
       "skipLibCheck": true,
   
@@ -23,5 +23,5 @@
     },
 
     "exclude": ["./cypress", "./cypress.config.ts"],
-    "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["src/app/remix.env.d.ts", "src/app/**/*.ts", "src/app/**/*.tsx"],
 }

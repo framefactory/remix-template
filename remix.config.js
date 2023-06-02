@@ -1,13 +1,13 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-    appDirectory: ".",
-    serverBuildPath: "../services/server/build",
-    assetsBuildDirectory: "../services/server/static",
-    cacheDirectory: "../.cache/remix",
+    appDirectory: "src/app",
+    serverBuildPath: "services/server/build/index.js",
+    assetsBuildDirectory: "services/server/static",
+    cacheDirectory: ".cache/remix",
     ignoredRouteFiles: ["**/.*", "**/*.test.{js,jsx,ts,tsx}"],
     publicPath: "/static/",
     serverModuleFormat: "cjs",
-    devServerPort: 3000,
+    devServerPort: 3001,
     future: {
         v2_errorBoundary: true,
         v2_meta: true,
