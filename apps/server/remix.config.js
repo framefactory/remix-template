@@ -2,7 +2,7 @@ require('dotenv').config();
 
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-    appDirectory: "app",
+    appDirectory: "src",
     serverBuildPath: "../../services/server/build/index.js",
     assetsBuildDirectory: "../../services/server/static",
     cacheDirectory: "../../.cache/remix",
